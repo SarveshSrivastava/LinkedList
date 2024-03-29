@@ -62,5 +62,31 @@ public class LinkedList {
 		length++;
 	}
 	
-
+	// remove last element
+	// 3 scenarios
+	// 1. when length is zero return null
+	// 2. when there are elements present 
+	// 3. only one element was present and we have to remove that
+	public Node removeLast() {
+		// 1.
+		if(length==0)return null;
+		
+		// 2.
+		Node temp=head;
+		Node pre=head;
+		while(temp.next!=null) {
+			pre=temp;
+			temp=temp.next;
+		}
+		tail=pre;
+		tail.next=null;
+		length--;
+		
+		// 3.
+		if(length==0) {
+			head=null;
+			tail=null;
+		}
+		return temp;
+	}
 }
