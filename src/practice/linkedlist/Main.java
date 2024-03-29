@@ -9,7 +9,14 @@ public class Main {
 		ll.getHead();
 		ll.getTail();
 		ll.getLength();
+		ll.printList();
 		
+		
+		ll.append(5);
+		
+		ll.getHead();
+		ll.getTail();
+		ll.getLength();
 		ll.printList();
 	}
 

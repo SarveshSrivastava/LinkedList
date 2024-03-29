@@ -38,7 +38,8 @@ public class LinkedList {
 	public void getLength() {
 		System.out.println("Length: " + length);
 	}
-
+	
+	// print linkedlist items
 	public void printList() {
 		Node temp = head;
 		while (temp != null) {
@@ -46,5 +47,20 @@ public class LinkedList {
 			temp = temp.next;
 		}
 	}
+	
+	// add element at last
+	public void append(int value) {
+		Node newNode=new Node(value);
+		if(length==0) {
+			head=newNode;
+			tail=newNode;
+		}
+		else {
+			tail.next=newNode;
+			tail=newNode;
+		}
+		length++;
+	}
+	
 
 }
